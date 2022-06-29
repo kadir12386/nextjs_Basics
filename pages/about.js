@@ -1,5 +1,5 @@
 import css from "../styles/Home.module.css";
-import Images from "next/image";
+// import Images from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 const about = ({ data }) => {
@@ -9,7 +9,8 @@ const about = ({ data }) => {
         <title>About Page</title>
         <meta name="keywords" content="text" />
       </Head>
-      <Images src="/girl.jpeg" width={300} height={300} />
+      {/* <Images src="/girl.jpeg" width={300} height={300} /> */}
+      <img src="/girl.jpeg" alt="girl_image" width="200px" />
       <h1 className={css.about_title}>About</h1>
       <p>This is the about Page</p>
       {data.map((datas, key) => (
