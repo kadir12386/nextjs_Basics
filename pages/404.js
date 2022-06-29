@@ -8,7 +8,7 @@ const NotFound = () => {
       console.log("Hitting");
       router.push("/");
     });
-  }, []);
+  }, [router]);
   return (
     <div>
       <h1>Sorry page not Found.....🙁🙁🙁🙁</h1>

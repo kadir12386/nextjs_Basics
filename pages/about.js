@@ -12,9 +12,11 @@ const about = ({ data }) => {
       <Images src="/girl.jpeg" width={300} height={300} />
       <h1 className={css.about_title}>About</h1>
       <p>This is the about Page</p>
-      {data.map((datas) => (
+      {data.map((datas, key) => (
         <Link href={"/users/" + datas.id}>
-          <h3 key={datas.id}>{datas.name}</h3>
+          <h3 index={key} key={datas.id}>
+            {datas.name}
+          </h3>
         </Link>
       ))}
     </div>
