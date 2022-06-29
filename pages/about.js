@@ -13,10 +13,8 @@ const about = ({ data }) => {
       <h1 className={css.about_title}>About</h1>
       <p>This is the about Page</p>
       {data.map((datas, key) => (
-        <Link href={"/users/" + datas.id}>
-          <h3 index={key} key={datas.id}>
-            {datas.name}
-          </h3>
+        <Link key={key} href={"/users/" + datas.id}>
+          <h3 key={datas.id}>{datas.name}</h3>
         </Link>
       ))}
     </div>
