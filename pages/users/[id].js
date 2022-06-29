@@ -1,14 +1,14 @@
 import React from "react";
 
-const UserDetails = ({ data }) => {
+const UserDetails = () => {
   // console.log(data);
   return (
     <div>
       UserDetails
-      <h1>Name:{data.name}</h1>
+      {/* <h1>Name:{data.name}</h1>
       <p>Email: {data.email}</p>
       <p>Phone: {data.phone}</p>
-      <p>City: {data.address.city}</p>
+      <p>City: {data.address.city}</p> */}
     </div>
   );
 };
@@ -46,16 +46,16 @@ export default UserDetails;
 //   };
 // };
 
-export const getServerSideProps = async (context) => {
-  const id = context.params.id;
-  console.log("ID", id);
+// export const getServerSideProps = async (context) => {
+//   const id = context.params.id;
+//   console.log("ID", id);
 
-  const api = await fetch("https://jsonplaceholder.typicode.com/users/" + id);
-  const data = await api.json();
+//   const api = await fetch("https://jsonplaceholder.typicode.com/users/" + id);
+//   const data = await api.json();
 
-  return {
-    props: {
-      data,
-    },
-  };
-};
+//   return {
+//     props: {
+//       data,
+//     },
+//   };
+// };
